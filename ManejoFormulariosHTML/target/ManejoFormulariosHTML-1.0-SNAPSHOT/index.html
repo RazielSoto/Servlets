@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio Formulario</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="recursos/estilos.css">
+        <script type="text/javascript" src="recursos/funciones.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    </head>
+
+    <body>
+            <div class= "d-flex justify-content-center">
+                <form  class="col-9 border border-5 border-info rounded-4 m-5 p-5 was-validated" name="form1" action="/ManejoFormulariosHTML/Servlet" method="post" 
+                       onsubmit="return validarForma(this)">
+                    <div class="text-center h4 pt-4">Formulario Registro de Datos</div>
+                    <input type="hidden" name="oculto" value="valorOculto"/>
+                    
+                    <fieldset>
+                        <div class="input-group mt-4">
+                            <label class="input-group-text">Usuario</label>
+                            <input class="form-control" type="text" name="usuario" placeholder="Ingresa tu nombre" required/>
+                            <div class="valid-feedback">
+                                Correcto
+                            </div>
+                        </div>    
+                         <div class="input-group mt-4">   
+                            <label class="input-group-text">Password</label>
+                            <input class="form-control" type="password" name="password" placeholder="Contraseña minimo 8 caracteres" required/>      
+                        </div> 
+                    </fieldset>
+                    
+                        <fieldset class="border mt-4 row row-cols-2">
+                            
+                            <div class="col-6 text-center">
+                                    <div class="border-end">
+                                        <div>Tecnologías de Internet:</div>
+                                        <div class="d-flex justify-content-evenly form-check">
+                                            
+                                            Java <input class="form-check-input" type="radio" name="tecnologia" value="java" required>
+                                            &nbsp;&nbsp;&nbsp;
+                                            .Net <input class="form-check-input" type="checkbox" name="tecnologia" value="net">
+                                            &nbsp;&nbsp;&nbsp;
+                                            Php <input class="form-check-input" type="radio" name="tecnologia" value="php" required>
+                   
+                                        </div> <!-- .d-flex -->    
+                                    </div> <!-- .border-end -->
+                                    
+                                    <div class="border-top border-end">
+                                        <div>Genero:</div>
+                                        <div class="d-flex justify-content-evenly form-check">
+                                            Hombre<input class="form-check-input" type="radio" name="genero" value="H" required>
+                                            &nbsp;&nbsp;&nbsp;
+                                            Mujer<input class="form-check-input" type="radio" name="genero" value="M" required>
+                                        </div> <!-- .d-flex -->
+                                    </div> <!-- .border-top -->   
+                                </div> <!-- .col-6 .text-center  -->      
+                       
+                                <div class="align-self-center">
+                                    <div class="form-floating">
+                                        <select  name="ocupacion" class="form-select" required>
+                                            <option selected disabled value="">Seleccionar</option>
+                                            <option value="1">Profesor</option>
+                                            <option value="2">Ingeniero</option>
+                                            <option value="3">Jubilado</option>
+                                            <option value="4">Otro</option>
+                                        </select>
+                                        <label>Ocupacion</label>
+                                    </div><!-- .form-floating -->
+                                </div> <!-- align-self-center -->
+                                
+                        </fieldset> <!-- .border .mt-4 .row .row-cols-2 -->
+                    
+                        <fieldset class="row row-cols-2 border mt-4 p-3">
+                            
+                            <div class="col-4">
+                                <div class="text-center">Musica Favorita</div>
+                                    <select name="musica" multiple class="form-control text-center" size="3" required>
+                                        <option value="rock">Rock</option>
+                                        <option value="pop">Pop</option>
+                                        <option value="salsa">Salsa</option>
+                                    </select>
+                            </div> <!-- .col-4 -->
+                            
+                            <div class="form-floating col-8">
+                                <textarea name="comentarios"  class="form-control" style="height: 130px"></textarea>
+                                <label class="form-label mx-3">Comentarios:</label>
+                            </div>
+                            
+                        </fieldset> <!-- .row .row-cols-2 .border .mt-4 .p-3 -->
+                   
+                        <div class="d-flex justify-content-evenly mt-5">
+                            <input type="reset" value="Limpiar" class="btn btn-warning default">
+                            <button type="submit" value="Enviar" class="btn btn-primary default">Enviar</button>   
+                        </div>  
+                </form>
+            </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
